@@ -1,0 +1,293 @@
+# Intended Learning Outcomes (ILOs) — ITiCSE 2026 Working Group 11
+# Generative AI Literacy for Computing Students in Higher Education
+#
+# Canonical, machine-readable list. Extracted from resources/wg11-ilos.pdf
+# ("Appendix. Full list of intended learning outcomes").
+#
+# Every `statement` completes the stem:
+#   "At the end of the course, students should be able to …"
+
+stem: "At the end of the course, students should be able to …"
+
+areas:
+  - id: H
+    name: History
+  - id: MM
+    name: Mental Models
+  - id: EPR
+    name: Ethics, Policy and Regulations
+  - id: CS
+    name: Computer Science
+
+ilos:
+  # ---------------------------------------------------------------- History
+  - id: H01
+    area: H
+    topic: History
+    statement: >-
+      identify key milestones (e.g. symbolic AI, rule-based systems, machine
+      learning, transformers, …) in AI history and explain why the field
+      experienced periods of rapid advancement and decline (AI winters)
+
+  - id: H02
+    area: H
+    topic: History
+    statement: >-
+      distinguish between earlier applications of AI (e.g., search algorithms
+      and engines, recommendation systems, navigation systems) and GenAI
+
+  # ---------------------------------------------------------- Mental Models
+  - id: MM01
+    area: MM
+    topic: How GenAI works
+    statement: >-
+      explain how GenAI models generate output using a simplified "next-word
+      prediction" process, recognising that real systems predict tokens and use
+      contextual information from prompts and prior text to determine their
+      responses.
+
+  - id: MM02
+    area: MM
+    topic: "How models are trained: a very high-level overview"
+    statement: >-
+      explain, in high-level terms, the GenAI model development process,
+      including data collection, pre-training, and alignment methods such as
+      fine-tuning and RLHF, as well as limitations associated with these
+      processes (e.g., biases related with data collection, dataset cutoff
+      dates).
+
+  - id: MM03
+    area: MM
+    topic: How GenAI works
+    statement: >-
+      evaluate technical, ethical and practical limitations of GenAI systems
+      (e.g. hallucinations, computational cost, context window, lack of true
+      understanding, biases, …)
+
+  - id: MM04
+    area: MM
+    topic: GenAI applications, use cases and user attitudes
+    statement: >-
+      identify potential GenAI use cases, such as summarisation, augmented
+      reasoning, generating content, evaluating content, ideation, and role
+      playing, whilst recognising that these systems might make occasional
+      mistakes.
+
+  - id: MM05
+    area: MM
+    topic: How GenAI works
+    statement: >-
+      analyze existing misconceptions about GenAI, distinguishing between its
+      actual capabilities and common myths / misinterpretations.
+
+  - id: MM06
+    area: MM
+    topic: GenAI applications, use cases and user attitudes
+    statement: >-
+      evaluate whether GenAI is appropriate for use in specific scenarios,
+      based on ethical, practical, and task-related considerations.
+
+  - id: MM07
+    area: MM
+    topic: Explainability
+    statement: >-
+      articulate what explainability means in AI (i.e., XAI) and how it can
+      improve user's trust when dealing with AI systems.
+
+  - id: MM08
+    area: MM
+    topic: Explainability
+    statement: >-
+      discuss the limitations of explainability in GenAI, including why outputs
+      can be difficult to interpret, and identify strategies to assess the
+      model's responses (e.g., fact-checking against trusted sources and
+      cross-checking outputs with alternative prompts) despite limited
+      transparency.
+
+  # ------------------------------------------ Ethics, Policy and Regulations
+  - id: EPR01
+    area: EPR
+    subarea: Resources and labor for GenAI
+    topic: Resources and Labor
+    statement: >-
+      understand the origins of resources (e.g. water, minerals, human labor)
+      required to train, deploy, and host large-scale AI models
+
+  - id: EPR02
+    area: EPR
+    subarea: GenAI and Data
+    topic: Input Data, Bias
+    statement: >-
+      identify data sources used to train GenAI models and describe how
+      training data quality, consent, and representation shape GenAI model
+      behaviors.
+
+  - id: EPR03
+    area: EPR
+    subarea: GenAI and Data
+    topic: Data Control
+    statement: >-
+      evaluate data management in GenAI systems in order to identify risks of
+      misuse, manipulation, and threats to data sovereignty.
+
+  - id: EPR04
+    area: EPR
+    subarea: GenAI and Data
+    topic: Output Data
+    statement: >-
+      explain the shortcomings of GenAI outputs (e.g. accuracy, reliability)
+      and recognise the need to follow the appropriate policies and regulations
+      within the context where the outputs will be used.
+
+  - id: EPR05
+    area: EPR
+    subarea: Limitations, Efficacy and Alignment
+    topic: Model Limitations
+    statement: >-
+      recognize limitations in GenAI model outputs, including hallucination,
+      misinformation, privacy leakage, harmful content, in the context of
+      societal impacts.
+
+  - id: EPR06
+    area: EPR
+    subarea: Limitations, Efficacy and Alignment
+    topic: Measures of Efficacy
+    statement: >-
+      differentiate between reliable, trustworthy, and responsible GenAI
+      systems.
+
+  - id: EPR07
+    area: EPR
+    subarea: Limitations, Efficacy and Alignment
+    topic: Alignment Practices
+    statement: >-
+      identify tools and procedures for evaluating and verifying model outputs,
+      and apply these to assess AI-generated content.
+
+  - id: EPR08
+    area: EPR
+    subarea: GenAI Use and Responsibility
+    topic: Cognitive Debt
+    statement: >-
+      explain how overreliance on GenAI can lead to cognitive debt.
+
+  - id: EPR09
+    area: EPR
+    subarea: GenAI Use and Responsibility
+    topic: Labor and Automation
+    statement: >-
+      analyze the effects of GenAI automation on human labor, workplace
+      expectations, and the labor market.
+
+  - id: EPR10
+    area: EPR
+    subarea: GenAI Use and Responsibility
+    topic: Evaluating AI Use
+    statement: >-
+      evaluate (the use of) GenAI systems against relevant normative principles
+      (e.g., fairness, transparency, accountability, safety, robustness, and
+      human governance).
+
+  - id: EPR11
+    area: EPR
+    subarea: GenAI Use and Responsibility
+    topic: Responsible Use
+    statement: >-
+      design a plan for the responsible and context-appropriate use of GenAI,
+      including documenting of GenAI-related outputs and decisions
+
+  - id: EPR12
+    area: EPR
+    subarea: GenAI in Social, Professional, and Regulatory Contexts
+    topic: AI Policy
+    statement: >-
+      identify and interpret relevant GenAI policies, assessing their
+      applicability to and impacts on GenAI use in different contexts.
+
+  - id: EPR13
+    area: EPR
+    subarea: GenAI in Social, Professional, and Regulatory Contexts
+    topic: Societal Influences, Expectations
+    statement: >-
+      discuss societal perceptions of and expectations around GenAI use, taking
+      into consideration power dynamics in the adoption of GenAI tools.
+
+  - id: EPR14
+    area: EPR
+    subarea: GenAI in Social, Professional, and Regulatory Contexts
+    topic: Discipline-Specific AI Norms
+    statement: >-
+      discuss frameworks for the fair and responsible use of GenAI in the
+      student's particular discipline.
+
+  # ------------------------------------------------------- Computer Science
+  - id: CS01
+    area: CS
+    subarea: Foundations of GenAI
+    topic: Types of models (local vs API, chatbot vs coding agent)
+    statement: >-
+      distinguish between different types of GenAI systems (e.g., web-based
+      chatbots, coding assistants, local vs cloud-hosted models) and apply this
+      knowledge to select an appropriate system for specific contexts.
+
+  - id: CS02
+    area: CS
+    subarea: Foundations of GenAI
+    topic: GenAI Core Concepts
+    statement: >-
+      explain operational GenAI concepts (e.g., tokens, context windows,
+      probability distributions, and non-determinism) and use these concepts to
+      interpret system behavior, output variability, and prompt sensitivity.
+
+  - id: CS03
+    area: CS
+    subarea: Foundations of GenAI
+    topic: Open source AI models vs proprietary models
+    statement: >-
+      compare open-source and proprietary GenAI models and identify their main
+      advantages and disadvantages for a given context, for example in terms of
+      data privacy.
+
+  - id: CS04a
+    area: CS
+    subarea: Trust, Risk, Verification
+    topic: Explainability and interpretability of GenAI output
+    statement: >-
+      demonstrate the understanding of the need to verify and review GenAI
+      outputs for correctness, completeness, bias, and potential harm before
+      integrating them into a final solution.
+
+  - id: CS04b
+    area: CS
+    subarea: Trust, Risk, Verification
+    topic: Explainability and interpretability of GenAI output
+    statement: >-
+      explain limitations of GenAI verification arising from non-determinism,
+      incomplete model transparency, and probabilistic output generation.
+
+  - id: CS05
+    area: CS
+    subarea: Human-AI Collaboration
+    topic: Plan vs. Code
+    statement: >-
+      deconstruct (decompose) problems and determine appropriate subtasks to be
+      undertaken by humans or GenAI systems.
+
+  - id: CS06
+    area: CS
+    subarea: Human-AI Collaboration
+    topic: Vibe vs AI-Assisted vs Agentic vs AI-TDD
+    statement: >-
+      distinguish between different levels of human oversight and automation in
+      GenAI-supported development workflows (e.g., AI-assisted, agentic, or
+      highly automated workflows) and select an appropriate workflow for a
+      given scenario.
+
+  - id: CS07
+    area: CS
+    subarea: Human-AI Collaboration
+    topic: Iterative Prompting and Refinement
+    statement: >-
+      apply prompt refinement techniques and evaluate outputs iteratively in
+      order to improve alignment between generated content and intended
+      outcomes.
