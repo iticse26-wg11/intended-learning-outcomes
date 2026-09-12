@@ -15,7 +15,8 @@ import re, sys, pathlib, yaml
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 ACTS = ROOT.parent / "learning-activities" / "activities"
 BEGIN, END = "<!-- BEGIN GENERATED -->", "<!-- END GENERATED -->"
-ACT_URL = "https://github.com/iticse26-wg11/learning-activities/blob/main/activities/{id}/README.md"
+ACT_REPO = "https://github.com/iticse26-wg11/learning-activities"
+ACT_URL = ACT_REPO + "/blob/main/activities/{id}/README.md"
 AREA_FILE = {"H": "history", "MM": "mental-models", "EPR": "ethics-policy-regulations", "CS": "computer-science"}
 ID_RE = re.compile(r"^(H|MM|EPR|CS)\d{2}[a-z]?$")
 
@@ -60,16 +61,20 @@ def ilo_page(stem, areas, i, acts):
             f"Generated from [`ilos.yaml`](../ilos.yaml) by `scripts/build-pages.py`; edit the YAML, not this file.", ""]
     return "\n".join(out)
 
-def area_table(rows):
-    out = ["| ID | Topic | ILO |", "|----|-------|-----|"]
+def addressed_by(acts, ilo_id):
+    return ", ".join(f"[{a}]({ACT_URL.format(id=a)})" for a, _ in acts.get(ilo_id, [])) or "—"
+
+def area_table(rows, acts):
+    out = ["| ID | Topic | ILO | Addressed by |", "|----|-------|-----|--------------|"]
     for i in rows:
-        out.append(f"| [**{i['id']}**](../ilos/{i['id']}.md) | {i['topic']} | … {one_line(i['statement'])} |")
+        out.append(f"| [**{i['id']}**](../ilos/{i['id']}.md) | {i['topic']} | … {one_line(i['statement'])} | {addressed_by(acts, i['id'])} |")
     return "\n".join(out)
 
-def area_page(stem, areas, code, rows):
+def area_page(stem, areas, code, rows, acts):
     out = [f"# {areas[code]} ({code})", "",
            f"All outcomes complete the stem: **\"{stem}\"**", "",
-           f"*Generated from [`ilos.yaml`](../ilos.yaml) by `scripts/build-pages.py`; each ID links to the ILO's stable page.*", ""]
+           f"*Generated from [`ilos.yaml`](../ilos.yaml) by `scripts/build-pages.py`; each ID links to the ILO's stable page, "
+           f"and \"Addressed by\" links to the [learning activities]({ACT_REPO}) that cover it.*", ""]
     subs = []
     for i in rows:
         s = i.get("subarea")
@@ -78,13 +83,13 @@ def area_page(stem, areas, code, rows):
     for s in subs:
         if s:
             out += [f"## {s}", ""]
-        out += [area_table([i for i in rows if i.get("subarea") == s]), ""]
+        out += [area_table([i for i in rows if i.get("subarea") == s], acts), ""]
     return "\n".join(out)
 
-def readme_block(areas, ilos):
-    out = ["| ID | Area | Topic | Outcome |", "|----|------|-------|---------|"]
+def readme_block(areas, ilos, acts):
+    out = ["| ID | Area | Topic | Outcome | Addressed by |", "|----|------|-------|---------|--------------|"]
     for i in ilos:
-        out.append(f"| [{i['id']}](ilos/{i['id']}.md) | {i['area']} | {i['topic']} | … {one_line(i['statement'])} |")
+        out.append(f"| [{i['id']}](ilos/{i['id']}.md) | {i['area']} | {i['topic']} | … {one_line(i['statement'])} | {addressed_by(acts, i['id'])} |")
     return "\n".join(out)
 
 def main():
@@ -98,11 +103,11 @@ def main():
     for i in ilos:
         files[ROOT / "ilos" / f"{i['id']}.md"] = ilo_page(stem, areas, i, acts)
     for code in areas:
-        files[ROOT / "areas" / f"{AREA_FILE[code]}.md"] = area_page(stem, areas, code, [i for i in ilos if i["area"] == code])
+        files[ROOT / "areas" / f"{AREA_FILE[code]}.md"] = area_page(stem, areas, code, [i for i in ilos if i["area"] == code], acts)
     readme = ROOT / "README.md"
     pre, _, rest = readme.read_text().partition(BEGIN)
     _, _, post = rest.partition(END)
-    files[readme] = f"{pre}{BEGIN}\n{readme_block(areas, ilos)}\n{END}{post}"
+    files[readme] = f"{pre}{BEGIN}\n{readme_block(areas, ilos, acts)}\n{END}{post}"
     stale = [p for p, s in files.items() if not p.exists() or p.read_text() != s]
     if check:
         for p in stale: print("stale:", p.relative_to(ROOT))
