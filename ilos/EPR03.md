@@ -6,6 +6,10 @@
 >
 > **evaluate data management in GenAI systems in order to identify risks of misuse, manipulation, and threats to data sovereignty.**
 
+## Why it is included
+
+Teaches students to read how a system handles data (origin, collection, storage, sharing, retention) and to turn that into named risks: misuse, manipulation, and loss of sovereignty when data crosses locations, controllers and jurisdictions.
+
 ## Addressed by
 
 - [LA05 AI Model Pipeline](https://github.com/iticse26-wg11/learning-activities/blob/main/activities/LA05/README.md)

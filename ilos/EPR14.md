@@ -6,6 +6,10 @@
 >
 > **discuss frameworks for the fair and responsible use of GenAI in the student's particular discipline.**
 
+## Why it is included
+
+Brings the topic home to the student's discipline by translating general ethical and governance frameworks into its norms, practices and professional standards; the capstone of the EPR ILOs.
+
 ## Addressed by
 
 - [LA15 AI Application Project](https://github.com/iticse26-wg11/learning-activities/blob/main/activities/LA15/README.md)

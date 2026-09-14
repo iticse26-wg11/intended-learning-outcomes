@@ -1,6 +1,7 @@
 #!/usr/bin/env -S uv run --quiet --with pyyaml python3
 """Generate the per-ILO pages (ilos/<ID>.md), the per-area tables (areas/*.md) and the
-README quick index from ilos.yaml, the single canonical source.
+README quick index from ilos.yaml, the single canonical source
+(statements and justifications there are themselves synced from the report by scripts/import-from-report.py).
 
 Usage:  scripts/build-pages.py            # rewrite generated files
         scripts/build-pages.py --check    # exit 1 if anything is stale or ids are malformed
@@ -55,6 +56,8 @@ def ilo_page(stem, areas, i, acts):
            f"> **{one_line(i['statement'])}**", ""]
     if i.get("status"):
         out.insert(2, f"**Status:** {i['status']}\n")
+    if i.get("justification"):
+        out += ["## Why it is included", "", one_line(i["justification"]), ""]
     out += ["## Addressed by", ""]
     out += [f"- [{a} {t}]({ACT_URL.format(id=a)})" for a, t in acts.get(i["id"], [])] or ["- *(no activity yet)*"]
     out += ["", "---", f"Stable link: `https://github.com/iticse26-wg11/intended-learning-outcomes/blob/main/ilos/{i['id']}.md` · "

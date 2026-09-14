@@ -4,7 +4,11 @@
 
 > *At the end of the course, students should be able to* …
 >
-> **evaluate (the use of) GenAI systems against relevant normative principles (e.g., fairness, transparency, accountability, safety, robustness, and human governance).**
+> **evaluate the use of GenAI systems against relevant normative principles (e.g., fairness, transparency, accountability, safety, robustness, and human governance).**
+
+## Why it is included
+
+Gives students the normative vocabulary (fairness, transparency, accountability, safety, robustness) to judge how far a given system complies, and places human governance, oversight and decision-making, at the centre of responsible use (EPR06).
 
 ## Addressed by
 

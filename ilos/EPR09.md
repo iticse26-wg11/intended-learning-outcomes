@@ -4,7 +4,11 @@
 
 > *At the end of the course, students should be able to* …
 >
-> **analyze the effects of GenAI automation on human labor, workplace expectations, and the labor market.**
+> **analyze the effects of GenAI systems on human labor, workplace expectations, and the labor market.**
+
+## Why it is included
+
+Prepares students for a labor market GenAI is reshaping: managerial pressure to use it, job displacement, and changing recruitment practices, so they can analyse rather than merely experience these effects (EPR13).
 
 ## Addressed by
 

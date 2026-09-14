@@ -4,7 +4,11 @@
 
 > *At the end of the course, students should be able to* …
 >
-> **explain the shortcomings of GenAI outputs (e.g. accuracy, reliability) and recognise the need to follow the appropriate policies and regulations within the context where the outputs will be used.**
+> **explain the shortcomings of GenAI outputs (e.g., accuracy, reliability) and recognize the need to follow the appropriate policies and regulations within the context where the outputs will be used.**
+
+## Why it is included
+
+Ties output shortcomings to the rules of the context in which outputs are used, whether personal, university or later professional; the most strongly endorsed EPR ILO in the survey. Pairs with MM03 on the technical side.
 
 ## Addressed by
 

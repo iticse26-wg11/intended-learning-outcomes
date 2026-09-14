@@ -7,6 +7,8 @@
 # Every `statement` completes the stem:
 #   "At the end of the course, students should be able to …"
 
+# Statements and justifications imported from the WG11 report, sections/50-design-ilos.tex (Overleaf commit bf239f6 2026-09-14) by scripts/import-from-report.py; re-run it, do not hand-edit them.
+
 stem: "At the end of the course, students should be able to …"
 
 areas:
@@ -25,26 +27,38 @@ ilos:
     area: H
     topic: History
     statement: >-
-      identify key milestones (e.g. symbolic AI, rule-based systems, machine
+      identify key milestones (e.g., symbolic AI, rule-based systems, machine
       learning, transformers, …) in AI history and explain why the field
-      experienced periods of rapid advancement and decline (AI winters)
+      experienced periods of rapid advancement and decline (e.g., AI winters)
+    justification: >-
+      Situates GenAI as the latest stage of a long, cyclical history, so
+      students can judge claims of novelty, expect cycles rather than steady
+      progress, and see which earlier ideas it builds on.
 
   - id: H02
     area: H
     topic: History
     statement: >-
       distinguish between earlier applications of AI (e.g., search algorithms
-      and engines, recommendation systems, navigation systems) and GenAI
+      and engines, recommendation systems, navigation systems) and GenAI.
+    justification: >-
+      Prevents conflating GenAI with the task-specific AI students already use
+      daily (search, recommendation, navigation); the two differ in failure
+      modes, trust, and regulatory scope (MM03, EPR06, EPR12).
 
   # ---------------------------------------------------------- Mental Models
   - id: MM01
     area: MM
     topic: How GenAI works
     statement: >-
-      explain how GenAI models generate output using a simplified "next-word
-      prediction" process, recognising that real systems predict tokens and use
-      contextual information from prompts and prior text to determine their
-      responses.
+      explain how GenAI models generate output using a simplified “next-word
+      prediction” process, recognizing that real systems predict tokens and
+      use contextual information from prompts and prior text to determine
+      their responses.
+    justification: >-
+      Builds the core mental model, dispelling the retrieval and reasoning
+      myths behind most misuse; “next-word” stands in for token prediction to
+      suit first-years (CS02 adds the detail).
 
   - id: MM02
     area: MM
@@ -52,26 +66,39 @@ ilos:
     statement: >-
       explain, in high-level terms, the GenAI model development process,
       including data collection, pre-training, and alignment methods such as
-      fine-tuning and RLHF, as well as limitations associated with these
-      processes (e.g., biases related with data collection, dataset cutoff
-      dates).
+      fine-tuning and reinforcement learning from human feedback (RLHF), as
+      well as limitations associated with these processes (e.g., biases
+      related to data collection, dataset cutoff dates).
+    justification: >-
+      Explains why models behave as they do: biases, cutoff dates, and
+      alignment effects trace back to how models are built, so students
+      anticipate limitations rather than discover them by accident (MM03,
+      EPR02).
 
   - id: MM03
     area: MM
     topic: How GenAI works
     statement: >-
       evaluate technical, ethical and practical limitations of GenAI systems
-      (e.g. hallucinations, computational cost, context window, lack of true
-      understanding, biases, …)
+      (e.g., hallucinations, computational cost, context window, lack of true
+      understanding, biases, …).
+    justification: >-
+      Develops the failure-mode awareness on which safe use depends; the
+      evaluation asked for is of impact on everyday tasks, not technical, and
+      the examples will date as the field moves.
 
   - id: MM04
     area: MM
     topic: GenAI applications, use cases and user attitudes
     statement: >-
-      identify potential GenAI use cases, such as summarisation, augmented
+      identify potential GenAI use cases, such as summarization, augmented
       reasoning, generating content, evaluating content, ideation, and role
-      playing, whilst recognising that these systems might make occasional
+      playing, whilst recognizing that these systems might make occasional
       mistakes.
+    justification: >-
+      Gives students a concrete repertoire of uses, so GenAI is neither
+      dismissed nor treated as an oracle; the reliability caveat keeps MM03 in
+      view.
 
   - id: MM05
     area: MM
@@ -79,6 +106,10 @@ ilos:
     statement: >-
       analyze existing misconceptions about GenAI, distinguishing between its
       actual capabilities and common myths / misinterpretations.
+    justification: >-
+      Confronts the myths students arrive with (e.g., that an LLM searches a
+      database), so that MM01 and MM02 replace them rather than sit alongside
+      them; LA01 makes them visible.
 
   - id: MM06
     area: MM
@@ -86,6 +117,10 @@ ilos:
     statement: >-
       evaluate whether GenAI is appropriate for use in specific scenarios,
       based on ethical, practical, and task-related considerations.
+    justification: >-
+      Turns capabilities and limitations (MM03, MM04) into the decision
+      students face daily: whether GenAI is appropriate for a task at all,
+      before any question of how to use it.
 
   - id: MM07
     area: MM
@@ -93,16 +128,24 @@ ilos:
     statement: >-
       articulate what explainability means in AI (i.e., XAI) and how it can
       improve user's trust when dealing with AI systems.
+    justification: >-
+      Introduces explainability as the basis for calibrated trust: students
+      learn to ask why a system answered as it did before deciding how far to
+      rely on it (EPR06).
 
   - id: MM08
     area: MM
     topic: Explainability
     statement: >-
-      discuss the limitations of explainability in GenAI, including why outputs
-      can be difficult to interpret, and identify strategies to assess the
-      model's responses (e.g., fact-checking against trusted sources and
+      discuss the limitations of explainability in GenAI, including why
+      outputs can be difficult to interpret, and identify strategies to assess
+      the model's responses (e.g., fact-checking against trusted sources and
       cross-checking outputs with alternative prompts) despite limited
       transparency.
+    justification: >-
+      Equips students with the verification strategies that must substitute
+      for the explanations GenAI cannot give; the practical counterpart of
+      MM07 and the basis for CS04a and EPR07.
 
   # ------------------------------------------ Ethics, Policy and Regulations
   - id: EPR01
@@ -110,8 +153,13 @@ ilos:
     subarea: Resources and labor for GenAI
     topic: Resources and Labor
     statement: >-
-      understand the origins of resources (e.g. water, minerals, human labor)
-      required to train, deploy, and host large-scale AI models
+      understand the origins of resources (e.g., water, minerals, energy,
+      human labor) required to train, deploy, and host large-scale AI models.
+    justification: >-
+      Builds sustainability awareness by tracing what large-scale AI consumes:
+      water, minerals and energy, and human labor from mining to data
+      labelling and to creators whose work enters training data, often
+      unknowingly (EPR02).
 
   - id: EPR02
     area: EPR
@@ -121,6 +169,12 @@ ilos:
       identify data sources used to train GenAI models and describe how
       training data quality, consent, and representation shape GenAI model
       behaviors.
+    justification: >-
+      Links model behavior to where its data came from. Concrete sources are
+      mostly opaque, so the ILO targets typical types, illustrated by known
+      cases such as The Pile, The Stack and Common Crawl [Wang, 2021; Lozhkov
+      et al., n.d.; Brown et al., n.d.]; respondents asked for exactly such
+      examples.
 
   - id: EPR03
     area: EPR
@@ -129,40 +183,63 @@ ilos:
     statement: >-
       evaluate data management in GenAI systems in order to identify risks of
       misuse, manipulation, and threats to data sovereignty.
+    justification: >-
+      Teaches students to read how a system handles data (origin, collection,
+      storage, sharing, retention) and to turn that into named risks: misuse,
+      manipulation, and loss of sovereignty when data crosses locations,
+      controllers and jurisdictions.
 
   - id: EPR04
     area: EPR
     subarea: GenAI and Data
     topic: Output Data
     statement: >-
-      explain the shortcomings of GenAI outputs (e.g. accuracy, reliability)
-      and recognise the need to follow the appropriate policies and regulations
-      within the context where the outputs will be used.
+      explain the shortcomings of GenAI outputs (e.g., accuracy, reliability)
+      and recognize the need to follow the appropriate policies and
+      regulations within the context where the outputs will be used.
+    justification: >-
+      Ties output shortcomings to the rules of the context in which outputs
+      are used, whether personal, university or later professional; the most
+      strongly endorsed EPR ILO in the survey. Pairs with MM03 on the
+      technical side.
 
   - id: EPR05
     area: EPR
     subarea: Limitations, Efficacy and Alignment
     topic: Model Limitations
     statement: >-
-      recognize limitations in GenAI model outputs, including hallucination,
+      recognize limitations of GenAI model outputs, including hallucination,
       misinformation, privacy leakage, harmful content, in the context of
       societal impacts.
+    justification: >-
+      Shifts the view of failure from the individual user to society:
+      hallucination, misinformation, privacy leakage and harmful content scale
+      with adoption, so students recognize them as public harms, not personal
+      inconvenience (MM03).
 
   - id: EPR06
     area: EPR
     subarea: Limitations, Efficacy and Alignment
     topic: Measures of Efficacy
     statement: >-
-      differentiate between reliable, trustworthy, and responsible GenAI
-      systems.
+      differentiate between reliable, trustworthy, and responsible AI systems.
+    justification: >-
+      Separates three qualities often conflated: reliable (performs
+      consistently and accurately), trustworthy (safe, fair, transparent and
+      secure enough to depend on) and responsible (designed and governed to
+      ethical, legal and societal standards). Builds on H02; grounds EPR10.
 
   - id: EPR07
     area: EPR
     subarea: Limitations, Efficacy and Alignment
     topic: Alignment Practices
     statement: >-
-      identify tools and procedures for evaluating and verifying model outputs,
-      and apply these to assess AI-generated content.
+      identify tools and procedures for evaluating and verifying model
+      outputs, and apply these to assess AI-generated content.
+    justification: >-
+      Moves verification from principle to practice: students identify tools
+      and procedures (source checking, cross-prompting, testing) and apply
+      them to AI-generated content; the counterpart of MM08 and CS04a.
 
   - id: EPR08
     area: EPR
@@ -170,23 +247,37 @@ ilos:
     topic: Cognitive Debt
     statement: >-
       explain how overreliance on GenAI can lead to cognitive debt.
+    justification: >-
+      Names the cost of overreliance: cognitive debt, the gradual erosion of
+      independent reasoning, expertise and judgement, in personal, educational
+      and professional life. Naming it lets students notice and prevent it.
 
   - id: EPR09
     area: EPR
     subarea: GenAI Use and Responsibility
     topic: Labor and Automation
     statement: >-
-      analyze the effects of GenAI automation on human labor, workplace
+      analyze the effects of GenAI systems on human labor, workplace
       expectations, and the labor market.
+    justification: >-
+      Prepares students for a labor market GenAI is reshaping: managerial
+      pressure to use it, job displacement, and changing recruitment
+      practices, so they can analyse rather than merely experience these
+      effects (EPR13).
 
   - id: EPR10
     area: EPR
     subarea: GenAI Use and Responsibility
     topic: Evaluating AI Use
     statement: >-
-      evaluate (the use of) GenAI systems against relevant normative principles
+      evaluate the use of GenAI systems against relevant normative principles
       (e.g., fairness, transparency, accountability, safety, robustness, and
       human governance).
+    justification: >-
+      Gives students the normative vocabulary (fairness, transparency,
+      accountability, safety, robustness) to judge how far a given system
+      complies, and places human governance, oversight and decision-making, at
+      the centre of responsible use (EPR06).
 
   - id: EPR11
     area: EPR
@@ -194,7 +285,12 @@ ilos:
     topic: Responsible Use
     statement: >-
       design a plan for the responsible and context-appropriate use of GenAI,
-      including documenting of GenAI-related outputs and decisions
+      including documenting GenAI-related outputs and decisions.
+    justification: >-
+      Turns responsibility into a plan: for a task involving GenAI, students
+      set explicit validation steps, anticipate barriers, and document
+      outputs, decisions and reasons for using GenAI, making their use
+      transparent and accountable (CS05, EPR07).
 
   - id: EPR12
     area: EPR
@@ -203,14 +299,24 @@ ilos:
     statement: >-
       identify and interpret relevant GenAI policies, assessing their
       applicability to and impacts on GenAI use in different contexts.
+    justification: >-
+      Supports policy-aware judgement: students locate the policies that apply
+      to them (academic integrity, data protection, workplace AI-use rules),
+      read them, and work out what they permit or forbid in a given context
+      (EPR04).
 
   - id: EPR13
     area: EPR
     subarea: GenAI in Social, Professional, and Regulatory Contexts
     topic: Societal Influences, Expectations
     statement: >-
-      discuss societal perceptions of and expectations around GenAI use, taking
-      into consideration power dynamics in the adoption of GenAI tools.
+      discuss societal perceptions of and expectations around GenAI use,
+      taking into consideration power dynamics in the adoption of GenAI tools.
+    justification: >-
+      Makes adoption a question of power as well as usefulness: pressure to
+      use or disclose GenAI, employers pushing productivity, and the imbalance
+      between providers and users; students ask whose interests adoption
+      serves and who decides (EPR09).
 
   - id: EPR14
     area: EPR
@@ -219,6 +325,10 @@ ilos:
     statement: >-
       discuss frameworks for the fair and responsible use of GenAI in the
       student's particular discipline.
+    justification: >-
+      Brings the topic home to the student's discipline by translating general
+      ethical and governance frameworks into its norms, practices and
+      professional standards; the capstone of the EPR ILOs.
 
   # ------------------------------------------------------- Computer Science
   - id: CS01
@@ -227,8 +337,12 @@ ilos:
     topic: Types of models (local vs API, chatbot vs coding agent)
     statement: >-
       distinguish between different types of GenAI systems (e.g., web-based
-      chatbots, coding assistants, local vs cloud-hosted models) and apply this
-      knowledge to select an appropriate system for specific contexts.
+      chatbots, coding assistants, local vs cloud-hosted models) and apply
+      this knowledge to select an appropriate system for a given context.
+    justification: >-
+      Builds the judgement to pick the right kind of tool for a task by
+      comparing capabilities, limitations and deployment (chatbot, coding
+      assistant, local or cloud); licensing trade-offs are left to CS03.
 
   - id: CS02
     area: CS
@@ -236,8 +350,13 @@ ilos:
     topic: GenAI Core Concepts
     statement: >-
       explain operational GenAI concepts (e.g., tokens, context windows,
-      probability distributions, and non-determinism) and use these concepts to
-      interpret system behavior, output variability, and prompt sensitivity.
+      probability distributions, and non-determinism) and use these concepts
+      to interpret system behavior, output variability, and prompt
+      sensitivity.
+    justification: >-
+      Gives students the vocabulary to explain why the same prompt yields
+      different answers; without tokens, context windows, and sampling,
+      variability looks like malfunction rather than design (MM01, CS04b).
 
   - id: CS03
     area: CS
@@ -245,8 +364,13 @@ ilos:
     topic: Open source AI models vs proprietary models
     statement: >-
       compare open-source and proprietary GenAI models and identify their main
-      advantages and disadvantages for a given context, for example in terms of
-      data privacy.
+      advantages and disadvantages for a given context, for example in terms
+      of data privacy.
+    justification: >-
+      Makes licensing and deployment a conscious choice: open-source,
+      open-weight or proprietary, and local, institution-hosted or third-party
+      API, decide who sees the data and who controls the model, plus cost and
+      performance.
 
   - id: CS04a
     area: CS
@@ -256,6 +380,10 @@ ilos:
       demonstrate the understanding of the need to verify and review GenAI
       outputs for correctness, completeness, bias, and potential harm before
       integrating them into a final solution.
+    justification: >-
+      Makes verification a habit before integration, the most strongly
+      endorsed ILO in the survey; the CS counterpart of MM08 and EPR07,
+      applied to code and other artefacts.
 
   - id: CS04b
     area: CS
@@ -264,24 +392,40 @@ ilos:
     statement: >-
       explain limitations of GenAI verification arising from non-determinism,
       incomplete model transparency, and probabilistic output generation.
+    justification: >-
+      Explains why verification can never be complete: non-determinism,
+      opacity and probabilistic generation undermine reproducibility and
+      assurance, so students calibrate how much checking a use demands (MM03,
+      MM08).
 
   - id: CS05
     area: CS
     subarea: Human-AI Collaboration
     topic: Plan vs. Code
     statement: >-
-      deconstruct (decompose) problems and determine appropriate subtasks to be
-      undertaken by humans or GenAI systems.
+      deconstruct (decompose) problems and determine appropriate subtasks to
+      be undertaken by humans or GenAI systems.
+    justification: >-
+      Develops human–GenAI task allocation at the level of broad subtasks, not
+      full decomposition proficiency: accuracy, assurance, judgement and
+      ethics stay with humans; repetitive, well-defined, checkable work can go
+      to GenAI.
 
   - id: CS06
     area: CS
     subarea: Human-AI Collaboration
     topic: Vibe vs AI-Assisted vs Agentic vs AI-TDD
     statement: >-
-      distinguish between different levels of human oversight and automation in
-      GenAI-supported development workflows (e.g., AI-assisted, agentic, or
+      distinguish between different levels of human oversight and automation
+      in GenAI-supported development workflows (e.g., AI-assisted, agentic, or
       highly automated workflows) and select an appropriate workflow for a
       given scenario.
+    justification: >-
+      Matches human oversight to risk. AI-assisted: the human works and GenAI
+      helps with single tasks; agentic: the human delegates and an agent acts
+      autonomously across several steps; highly automated: several GenAI
+      components interact with little human intervention. Well-justified
+      choices count more than a reference answer.
 
   - id: CS07
     area: CS
@@ -291,3 +435,7 @@ ilos:
       apply prompt refinement techniques and evaluate outputs iteratively in
       order to improve alignment between generated content and intended
       outcomes.
+    justification: >-
+      Turns prompting into an evaluative loop: refine, judge the output
+      against the intended outcome, refine again; the practical skill through
+      which MM01 and CS02 pay off.

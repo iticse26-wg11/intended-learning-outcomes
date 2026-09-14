@@ -8,7 +8,7 @@ All outcomes complete the stem: **"At the end of the course, students should be 
 
 | ID | Topic | ILO | Addressed by |
 |----|-------|-----|--------------|
-| [**CS01**](../ilos/CS01.md) | Types of models (local vs API, chatbot vs coding agent) | … distinguish between different types of GenAI systems (e.g., web-based chatbots, coding assistants, local vs cloud-hosted models) and apply this knowledge to select an appropriate system for specific contexts. | [LA13](https://github.com/iticse26-wg11/learning-activities/blob/main/activities/LA13/README.md) |
+| [**CS01**](../ilos/CS01.md) | Types of models (local vs API, chatbot vs coding agent) | … distinguish between different types of GenAI systems (e.g., web-based chatbots, coding assistants, local vs cloud-hosted models) and apply this knowledge to select an appropriate system for a given context. | [LA13](https://github.com/iticse26-wg11/learning-activities/blob/main/activities/LA13/README.md) |
 | [**CS02**](../ilos/CS02.md) | GenAI Core Concepts | … explain operational GenAI concepts (e.g., tokens, context windows, probability distributions, and non-determinism) and use these concepts to interpret system behavior, output variability, and prompt sensitivity. | [LA03](https://github.com/iticse26-wg11/learning-activities/blob/main/activities/LA03/README.md) |
 | [**CS03**](../ilos/CS03.md) | Open source AI models vs proprietary models | … compare open-source and proprietary GenAI models and identify their main advantages and disadvantages for a given context, for example in terms of data privacy. | [LA13](https://github.com/iticse26-wg11/learning-activities/blob/main/activities/LA13/README.md) |
 

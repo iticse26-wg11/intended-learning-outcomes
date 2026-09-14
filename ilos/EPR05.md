@@ -4,7 +4,11 @@
 
 > *At the end of the course, students should be able to* …
 >
-> **recognize limitations in GenAI model outputs, including hallucination, misinformation, privacy leakage, harmful content, in the context of societal impacts.**
+> **recognize limitations of GenAI model outputs, including hallucination, misinformation, privacy leakage, harmful content, in the context of societal impacts.**
+
+## Why it is included
+
+Shifts the view of failure from the individual user to society: hallucination, misinformation, privacy leakage and harmful content scale with adoption, so students recognize them as public harms, not personal inconvenience (MM03).
 
 ## Addressed by
 

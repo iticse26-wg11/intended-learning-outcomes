@@ -6,6 +6,10 @@
 >
 > **identify tools and procedures for evaluating and verifying model outputs, and apply these to assess AI-generated content.**
 
+## Why it is included
+
+Moves verification from principle to practice: students identify tools and procedures (source checking, cross-prompting, testing) and apply them to AI-generated content; the counterpart of MM08 and CS04a.
+
 ## Addressed by
 
 - [LA11 Content Detection Limitations](https://github.com/iticse26-wg11/learning-activities/blob/main/activities/LA11/README.md)

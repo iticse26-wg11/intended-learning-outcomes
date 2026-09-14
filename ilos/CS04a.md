@@ -6,6 +6,10 @@
 >
 > **demonstrate the understanding of the need to verify and review GenAI outputs for correctness, completeness, bias, and potential harm before integrating them into a final solution.**
 
+## Why it is included
+
+Makes verification a habit before integration, the most strongly endorsed ILO in the survey; the CS counterpart of MM08 and EPR07, applied to code and other artefacts.
+
 ## Addressed by
 
 - [LA10 AI Use Case Analysis and Evaluation](https://github.com/iticse26-wg11/learning-activities/blob/main/activities/LA10/README.md)

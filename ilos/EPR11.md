@@ -4,7 +4,11 @@
 
 > *At the end of the course, students should be able to* …
 >
-> **design a plan for the responsible and context-appropriate use of GenAI, including documenting of GenAI-related outputs and decisions**
+> **design a plan for the responsible and context-appropriate use of GenAI, including documenting GenAI-related outputs and decisions.**
+
+## Why it is included
+
+Turns responsibility into a plan: for a task involving GenAI, students set explicit validation steps, anticipate barriers, and document outputs, decisions and reasons for using GenAI, making their use transparent and accountable (CS05, EPR07).
 
 ## Addressed by
 
