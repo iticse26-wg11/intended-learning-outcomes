@@ -106,3 +106,7 @@ Items the working group may wish to look at (left as in the source):
 
 - **EPR01** is the only ILO whose verb is *understand*, which is not directly observable/assessable; the other outcomes use Bloom-style verbs (identify, explain, evaluate, …).
 - **MM01/MM03/MM05** share the topic label "How GenAI works" and **MM04/MM06** share "GenAI applications, use cases and user attitudes"; the Mental Models area has no explicit sub-area headings, unlike EPR and CS.
+
+## License
+
+Content is released under [CC BY 4.0](LICENSE): reuse and adapt it freely with attribution to ITiCSE 2026 Working Group 11.
